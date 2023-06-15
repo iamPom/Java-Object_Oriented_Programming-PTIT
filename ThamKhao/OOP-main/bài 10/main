@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Bai10_Main {
+    public static Scanner sc = new Scanner(System.in);
+
+    public static void main(String args[]) {
+        Bai10_MaTraVuong b10 = null;
+        while (true) {
+            System.out.println("=========MENU=========");
+            System.out.println("1.nhập ma trận vuông cấp n");
+            System.out.println("2.max trong hàng, cột va đường chéo");
+            System.out.println("3.xem ma trận chuyển vị");
+            System.out.println("4.min trong hàng, cột va đường chéo");
+            System.out.println("5.ma trận A có phải là ma trận đối xứng không");
+            System.out.println("6.tính định thức của ma trận");
+            System.out.println("7.tìm ma trận nghịch đảo");
+            System.out.println("0.exit");
+            System.out.println("nhập lựa chọn: ");
+            int chon = sc.nextInt();
+            switch (chon) {
+                case 0:
+                    System.out.println("============Bye============");
+                    System.exit(0);
+                case 1:
+                    b10 = new Bai10_MaTraVuong();
+                    break;
+                case 2:
+                    b10.MAX();
+                    break;
+                case 3:
+                    b10.chuyenvi();
+                    break;
+                case 4:
+                    b10.MIN();
+                    break;
+                case 5:
+                    b10.kiemtradoixung();
+                    break;
+                case 6:
+                    b10.DET_A();
+                    break;
+                case 7:
+                    b10.nghichdao();
+                    break;
+                default:
+                    System.out.println("chỉ chọn từ 0 đến 7");
+            }
+        }
+    }
+}
